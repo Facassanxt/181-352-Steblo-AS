@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru" dir="ltr">
+
+<head>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
+  <script type="text/javascript"></script>
+  <script>
+    $(function() {
+        $(window).on("scroll resize", function() {
+            var o = $(window).scrollTop() / ($(document).height() - $(window).height());
+            $(".progress-bar").css({
+                "width": (100 * o | 0) + "%"
+            });
+        })
+    });
+</script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8" http-equiv="Cache-Control" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Facassanxt</title>
+</head>
+
+<body class="unselectable">
+  <div class="progress">
+    <div class="progress-container">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+      </div>
+    </div>
+  </div>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <a class="navbar-brand" href="#">Facassanxt</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main" class="container">
+    <div class="jumbotron">
+      <h1>Название игры: Парк</h1>
+      <h2>Разработчик: Стебло Алексей</h2>
+      <h3>Группа: 181-352</h3>
+      <h4>Вариант: #1</h4>
+    </div>
+
+    <div class=" border-success my-4">
+      <div class="card-header text-white bg-success">Авторизация</div>
+      <div class="card-body">
+        <form name="AccInput" class="container" method="post" action="/login/">
+          <table>
+            <tr>
+              <td><label><b>Login:</b></label></td>
+              <td><input type="text" name="login"></td>
+              <td><input type="BUTTON" value=" Старт " onclick="login()" height="40" width="50"></td>
+            </tr>
+            <tr>
+              <td><label><b>Password:</b></label></td>
+              <td><input type="text" name="password"></td>
+            </tr>
+            <tr>
+              <td><input type="BUTTON" value=" Восстановть пароль " onclick="login()" height="40" width="50"><td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
