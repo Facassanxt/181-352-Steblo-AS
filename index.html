@@ -76,17 +76,78 @@
           <table>
             <tr>
               <td><label><b>Login:</b></label></td>
-              <td><input type="text" name="login"></td>
+              <td><input placeholder="Введите логин" type="text" name="login"></td>
               <td><input type="BUTTON" value=" Старт " onclick="login()" height="40" width="50"></td>
             </tr>
             <tr>
               <td><label><b>Password:</b></label></td>
-              <td><input type="text" name="password"></td>
+              <td><input placeholder="Введите пароль" type="text" name="password"></td>
             </tr>
             <tr>
-              <td><input type="BUTTON" value=" Восстановть пароль " onclick="login()" height="40" width="50"><td>
+              <td>
+                <div class="mx-auto text-center">
+                  <button class="btn border-success btn-lg" data-toggle="modal" data-target="#exampleModal">Восстановление</button>
+                </div>
+              <td>
+                <div class="mx-auto text-center">
+                  <button class="btn border-success btn-lg" data-toggle="modal" data-target="#exampleModal2">Регистрация</button>
+                </div>
             </tr>
           </table>
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="recovery">
+                    <div class="form-group">
+                      <label for="email">Ваш E-mail для восстановления:</label>
+                      <input id="email" class="form-control" name="email" required="" type="email" placeholder="Facassanxt@gmail.com">
+                    </div>
+                    <input type="button" value="Отправить" class="btn btn-success"></input>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="Registr">
+                    <div class="form-group">
+                      <label for="LOG">Логин:</label>
+                      <input id="LOG" class="form-control" name="LOG" required="" type="text" placeholder="Facassanxt">
+                    </div>
+                    <div class="form-group">
+                      <label for="PAS">Пароль:</label>
+                      <input id="PAS" class="form-control" name="PAS" required="" type="text" placeholder="TG4qswqw9s">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Ваш E-mail:</label>
+                      <input id="email" class="form-control" name="email" required="" type="email" placeholder="Facassanxt@gmail.com">
+                    </div>
+                    <div class="form-group form-check">
+                      <input id="check" class="form-check-input" checked="" type="checkbox">
+                      <label class="form-check-label" for="check">Нажать если все ок )</label>
+                    </div>
+                    <input type="button" value="Отправить" class="btn btn-success"></input>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     </div>
