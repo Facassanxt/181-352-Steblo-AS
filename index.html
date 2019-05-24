@@ -2,21 +2,6 @@
 <html lang="ru" dir="ltr">
 
 <head>
-
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
-  <script type="text/javascript"></script>
-  <script>
-    $(function() {
-        $(window).on("scroll resize", function() {
-            var o = $(window).scrollTop() / ($(document).height() - $(window).height());
-            $(".progress-bar").css({
-                "width": (100 * o | 0) + "%"
-            });
-        })
-    });
-</script>
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -69,9 +54,9 @@
       <h4>Вариант: #1</h4>
     </div>
 
-    <div class=" border-success my-4">
+    <div class="card bg-transparent border-success my-4">
       <div class="card-header text-white bg-success">Авторизация</div>
-      <div class="card-body">
+      <div class="card-body" style="background: rgba(67, 210, 210, 0.6)">
         <form name="AccInput" class="container" method="post" action="/login/">
           <table>
             <tr>
