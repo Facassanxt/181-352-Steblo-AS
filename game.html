@@ -18,9 +18,10 @@
   <title>Facassanxt</title>
 </head>
 
+
 <body class="unselectable">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(23, 170, 233, 0.7)">
       <a class="navbar-brand" href="#">Facassanxt</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -41,12 +42,30 @@
   </header>
 
   <main role="main" class="container">
-    <div class="jumbotron">
-      <h1>Название игры: Парк</h1>
-      <h2>Разработчик: Стебло Алексей</h2>
-      <h3>Группа: 181-352</h3>
-      <h4>Вариант: #1</h4>
+    <div class="jumbotron" style="background-color: rgba(47, 179, 236, 0.6)">
+      <p><b>Очарование игр в зоопарк
+        Замечательный облик, интересная игровая идея и разнообразные функции — всё это придаёт игре в зоопарк определённое очарование.
+
+        удовольствие для всех
+        Благодаря комбинации строительной игры и симулятора зоопарка, игры в зоо обеспечивают удовольствие игрокам всех возрастов.</b></p>
     </div>
+
+
+
+
+    <script>
+      var waiting = new Promise(function(resolve) {
+        setTimeout(resolve, 4000);
+      });
+      $(window).on('load', function() {
+        waiting.then(function() {
+          var $preloader = $('#page-preloader'),
+            $spinner = $preloader.find('.spinner');
+          $spinner.fadeOut();
+          $preloader.delay(350).fadeOut('slow');
+        });
+      });
+    </script>
 </body>
 
 </html>
